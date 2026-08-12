@@ -1,0 +1,4 @@
+import axiosClient from './axiosClient';
+
+export const getChatHistory = (senderId, recipientId) =>
+    axiosClient.get(`/messages/${senderId}/${recipientId}`);

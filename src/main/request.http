@@ -1,0 +1,25 @@
+### Register
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "nickName": "atilla",
+  "fullName": "Atilla Test",
+  "password": "12345678"
+}
+
+### Login
+POST http://localhost:8080/api/v1/auth/authenticate
+Content-Type: application/json
+
+{
+  "nickName": "atilla",
+  "password": "12345678"
+}
+
+### Users - Token'sız
+GET http://localhost:8080/users
+
+### Users - Token'lı
+GET http://localhost:8080/users
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhdGlsbGEiLCJpYXQiOjE3ODYzMjAyNzcsImV4cCI6MTc4NjQwNjY3N30.gxqpVXsZcRDQQL-CPF5wH_BfUJgdAM0xTG3qDl4AGx6H6BAjFNfWIsv2V7AQvc7w
